@@ -120,7 +120,7 @@ And that folder is :-
   auto main()
       -> int
   {
-    std::cout << constants::pi  << '\n';
+    std::cout << constants::omega  << '\n';
   }
   ```
 
