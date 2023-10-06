@@ -1,0 +1,94 @@
+site_name: Kraken
+# Project information
+site_url: https://yahya-mohammed07.github.io/Kraken-docs/
+site_author: Yahya Mohammed
+
+# Repository
+repo_name: Kraken-docs 
+repo_url: https://github.com/yahya-mohammed07/Kraken-docs/
+edit_uri: ""
+
+# Configuration
+theme:
+  nav_style: dark
+  template: version_selector.html
+  name: material
+  custom_dir: overrides
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - navigation.expand
+    - navigation.indexes
+    - navigation.sections
+    # - navigation.tabs
+    - navigation.footer
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+# Plugins
+plugins:
+  - search
+# Customization
+extra:
+  version:
+    provider: mike
+
+nav:
+  - Home: index.md
+  - Matrices: about_matrix.md
+  - Numeric: about_numeric.md
+  - Numerical Analysis: about_numeric_methods.md
+  - Constants: about_constants.md
